@@ -10,24 +10,32 @@
       <version>2.0.13</version>
     </dependency>
     <dependency>
-      <groupId>com.github.jonpeterson</groupId>
-      <artifactId>bitcask</artifactId>
-      <version>0.2.1</version>
-    </dependency>
-    <dependency>
       <groupId>org.iq80.leveldb</groupId>
       <artifactId>leveldb</artifactId>
       <version>0.12</version>
-    </dependency>
-    <dependency>
-      <groupId>org.rocksdb</groupId>
-      <artifactId>rocksdbjni</artifactId>
-      <version>8.9.0</version>
     </dependency>
     <dependency>
       <groupId>com.sleepycat</groupId>
       <artifactId>je</artifactId>
       <version>18.3.12</version>
     </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>5.10.2</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.2.5</version>
+        <configuration>
+          <useModulePath>false</useModulePath>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
